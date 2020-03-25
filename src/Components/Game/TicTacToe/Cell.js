@@ -2,7 +2,7 @@ import React from "react";
 
 function Cell(props) {
   const cellValue = props.value;
-  let borderStyle = cellValue === "X" ? "blue" : "red";
+  let backgroundStyle = cellValue === "X" ? "darkGray" : "gray";
   return (
     <div
       onClick={props.onClick}
@@ -12,10 +12,10 @@ function Cell(props) {
         height: "40px",
         padding: "20px",
         paddingTop: "30px",
-        border: "1px solid " + borderStyle,
+        border: "1px indent lightGray",
         textAlign: "center",
         verticalAlign: "center",
-        background: borderStyle
+        background: backgroundStyle
       }}
     >
       {cellValue}

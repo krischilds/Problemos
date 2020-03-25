@@ -1,15 +1,12 @@
 import React from "react";
 import LinkedList from "./LinkedList";
 
-/**
- *
- */
-const LogicProblems = () => {
+const LinkedListProblems = () => {
   const output1 = LinkedListProblem();
   //  console.log(output1);
   return (
     <div className="alert alert-info" role="alert">
-      <h4 className="alert-heading">Logif Problems Completed</h4>
+      <h4 className="alert-heading">Logic Problems Completed</h4>
       <p className="mb-0">{output1}</p>
       <hr />
     </div>
@@ -42,4 +39,4 @@ const LinkedListProblem = () => {
   );
 };
 
-export default LogicProblems;
+export default LinkedListProblems;
