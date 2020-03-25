@@ -1,9 +1,12 @@
 import "./styles.css";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Game from "./Game";
+import Game from "./Components/LogicProblems/Game";
 import Home from "./Home";
-import LogicProblems from "./LogicProblems";
+import ProblemList from "./Components/Problems";
+import NavMenu from "./Components/Nav"
+import LinkedListProblems from "./Components/LogicProblems/LinkedList/LinkedListProblems";
+import FindMeetingTimes from "./Components/LogicProblems/FindMeetingTimes";
 
 export default function AppLinks() {
   return (
@@ -12,24 +15,16 @@ export default function AppLinks() {
 
       <Router>
         <div>
-          <ul>
-            <li>
-              <Link to="/home">Home</Link>
-            </li>
-            <li>
-              <Link to="/game">TTTicacoe</Link>
-            </li>
-            <li>
-              <Link to="/logic-problems">Logic Problems</Link>
-            </li>
-          </ul>
+          <NavMenu />
 
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/home" component={Home} />
-            <Route exact path="/game" component={Game} />
-            <Route exact path="/logic-problems" component={LogicProblems} />
+            <Route exact path="/home" component={ProblemList} />
+            <Route exact path="/ttt" component={Game} />
+            <Route exact path="/linked-list" component={LinkedListProblems} />
+            <Route exact path="/meeting-times" component={FindMeetingTimes} />
           </Switch>
+
         </div>
       </Router>
     </section>
